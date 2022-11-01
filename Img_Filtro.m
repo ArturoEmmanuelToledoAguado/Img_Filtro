@@ -82,6 +82,17 @@ imgFMPg=imfilter(imgRG,med);
 imgFMPsp=imfilter(imgRSP,med);
 imgFMPum=imfilter(imgRUm,med);
 
+    %Filtro Gaussiano
+%Distribucion normal
+x=[-1,0,1];
+mu=2;
+sigma=1.1;
+y=normpdf(x,mu,sigma);
+gau=[y(1),y(2),y(2),y(1);y(2),y(3),y(3),y(2);y(2),y(3),y(3),y(2);y(1),y(2),y(2),y(1)];%Mascara
+imgFGPg=imfilter(imgRG,media);
+imgFGPsp=imfilter(imgRSP,media);
+imgFGPum=imfilter(imgRUm,media);
+
 %Mostramos las imagenes
 figure
 subplot(3,3,1)
@@ -90,6 +101,9 @@ title('Ruido Gaussiano')
 subplot(3,3,2)
 imshow(imgFMPg)
 title('Filtro Media Propuesto')
+subplot(3,3,3)
+imshow(imgFGPg)
+title('Filtro Gaussiano Propuesto')
 
 subplot(3,3,4)
 imshow(imgRSP)
@@ -97,6 +111,9 @@ title('Ruido Impulsivo')
 subplot(3,3,5)
 imshow(imgFMPsp)
 title('Filtro Media Propuesto')
+subplot(3,3,6)
+imshow(imgFGPsp)
+title('Filtro Gaussiano Propuesto')
 
 subplot(3,3,7)
 imshow(imgRSP)
@@ -104,3 +121,6 @@ title('Ruido Impulsivo')
 subplot(3,3,8)
 imshow(imgFMPum)
 title('Filtro Media Propuesto')
+subplot(3,3,9)
+imshow(imgFGPum)
+title('Filtro Gaussiano Propuesto')
