@@ -79,4 +79,4 @@ figure();imshow(imfilt);title('Filtro de media de 9x9');
 
 //imagenes
 
-<a href="https://github.com/ArturoEmmanuelToledoAguado/Img_Ruido/blob/main/Img_Ruido.m">Código</a>
+<a href="https://github.com/ArturoEmmanuelToledoAguado/Img_Filtro/blob/main/Img_Filtro.m">Código</a>
