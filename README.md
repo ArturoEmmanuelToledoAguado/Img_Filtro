@@ -96,14 +96,27 @@ La varianza, indica el nivel de suavizado:
 <h5 align="center"><code>ImagenFiltrada=fspecial('gaussian',tamaño del filtro, sigma);</code></h5>
 
 * Tamaño del filtro: Es un vector que especifica el número de filas o columnas, por default el filtro es de 3x3
-* Sigma ($\sigma$): Es la desviación estandar, por default es de 0.5
+* Sigma (σ): Es la desviación estandar, por default es de 0.5
 
-0.0113 | 0.0838 | 0.0113
--------|--------|--------
-0.0838 | 0.6193 | 0.0838
-0.0113 | 0.0838 | 0.0113
+<table ALIGN="left">
+    <td>0.0113</td>
+    <td>0.0838</td>
+    <td>0.0113</td>
+    <tr>
+    <td>0.0838</td>
+    <td>0.6193</td>
+    <td>0.0838</td>
+    <tr>
+    <td>0.0113</td>
+    <td>0.0838</td>
+    <td>0.0113</td>
+</table>
+
+<br>
 
 Máscara de filtro Gaussiano de 3x3 con sigma de 0.5
+
+<br><br>
 
 * Nota.- La mascara de este filtro depende del valor de sigma, por eso no existe una mascara por defecto como tal
 * Nota.- Las mascaras modifican el valor del centro de la imagen donde se coloca dicha mascara (la mascara no se modifica)
