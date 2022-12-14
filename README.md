@@ -14,7 +14,7 @@ Algo que tiene mucho peso en las imágenes es el concepto de **conectividad**. H
 
 Se consideran diferentes tipos de conectividad, por ejemplo conectividad 4 o conectividad 8, donde se consideran los pixeles conectados en diagonal.
 
-![1](DocIMG/1.png)
+![1](DocIMG/1.PNG)
 
 * Conectividad 4: Se consideran N,W,E,S
 * Conectividad 8: Se consideran N,W,E,S,NW,NE,SE,SW
@@ -90,7 +90,7 @@ imshow(imfilt);title('filtro de media 9x9');
 ##### Filtro gaussiano
 Este filtro tiene una media ponderada, los pesos de la matriz toman la forma de la campana de Gauss.
 
-![2](DocIMG/2.png)
+![2](DocIMG/2.PNG)
 
 La varianza, indica el nivel de suavizado:
 * Varianza grande: Campana más ancha, mayor suavizado
