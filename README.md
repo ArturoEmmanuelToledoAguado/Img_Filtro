@@ -47,7 +47,7 @@ Les da pesos iguales a todos los pixeles en el vecindario para reducir la cantid
 
 * Nota.- Cada pixel se remplaza por la media de los pixeles vecinos
 
-//imagen
+![1](DocIMG/1.png)
 
 En Matlab la función que permite realizar un filtro de la media es <a>**imfilter**</a>
 
@@ -87,7 +87,7 @@ imshow(imfilt);title('filtro de media 9x9');
 ##### Filtro gaussiano
 Este filtro tiene una media ponderada, los pesos de la matriz toman la forma de la campana de Gauss.
 
-//imagenes
+![2](DocIMG/2.png)
 
 La varianza, indica el nivel de suavizado:
 * Varianza grande: Campana más ancha, mayor suavizado
@@ -109,7 +109,32 @@ Máscara de filtro Gaussiano de 3x3 con sigma de 0.5
 * Nota.- Las mascaras modifican el valor del centro de la imagen donde se coloca dicha mascara (la mascara no se modifica)
 
 #### Resultados
+Se usaron las siguientes imagenes para esta practica:
 
-<div align="center"><img src="DocIMG/Resultados.gif"></div>
+<div align="center"><img src="DocIMG/Prueba.gif"></div>
 
-<a href="https://github.com/ArturoEmmanuelToledoAguado/Ecu-Histograma/blob/main/Ecualizar_Img.m">Código</a>
+A cada una de las imagenesse le añadio Ruido Gaussiano, impulsivo y multiplicativo; primero se usaron los filtros de la media y Gaussiano (4x4) que ofrece por defecto Matlab, dando los siguientes resultados:
+
+<div align="center"><img src="DocIMG/Matlab.gif"></div>
+
+Posteriormente se propusieron los siguientes filtros; para el de la media se propuso la siguiente matriz
+
+1.5 | 1 | 1 | 1.5
+----|--------|--------|--------
+1 | 1 | 1 | 1
+1 | 1 | 1 | 1
+1.5 | 1 | 1 | 1.5
+
+Mientras que para el filtro Gaussiano se uso una $\sigma$ = 1.1 con una $\mu$=2 obteniendo la siguiente matriz
+
+0.0088 | 0.0695 | 0.0695 | 0.0088
+--|--|--|--
+0.0695 | 0.2399 | 0.2399 | 0.0695
+0.0695 | 0.2399 | 0.2399 | 0.0695
+0.0088 | 0.0695 | 0.0695 | 0.0088
+
+A continuación se muestran los resutados obtenidos
+
+<div align="center"><img src="DocIMG/Resultado.gif"></div>
+
+<a href="https://github.com/ArturoEmmanuelToledoAguado/Img_Filtro/blob/main/Img_Filtro.m">Código</a>
