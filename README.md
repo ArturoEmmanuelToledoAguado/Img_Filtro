@@ -14,7 +14,7 @@ Algo que tiene mucho peso en las imágenes es el concepto de **conectividad**. H
 
 Se consideran diferentes tipos de conectividad, por ejemplo conectividad 4 o conectividad 8, donde se consideran los pixeles conectados en diagonal.
 
-//imagen
+![1](DocIMG/1.png)
 
 * Conectividad 4: Se consideran N,W,E,S
 * Conectividad 8: Se consideran N,W,E,S,NW,NE,SE,SW
@@ -47,7 +47,10 @@ Les da pesos iguales a todos los pixeles en el vecindario para reducir la cantid
 
 * Nota.- Cada pixel se remplaza por la media de los pixeles vecinos
 
-![1](DocIMG/1.png)
+1 | 1 | 1
+-------|--------|--------
+1 | 1 | 1
+1 | 1 | 1
 
 En Matlab la función que permite realizar un filtro de la media es <a>**imfilter**</a>
 
